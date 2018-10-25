@@ -10,13 +10,15 @@ public class Movement : MonoBehaviour
     public GameObject ob;
     private float currentTime;
     private GameObject newOb;
+    private AudioSource source;
+    public AudioClip clip;
 
 
     // Use this for initialization
     void Start ()
 	{
 		rb = GetComponent<Rigidbody>();
-
+        source = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -53,8 +55,8 @@ public class Movement : MonoBehaviour
         // shoot
 	    if (Input.GetKeyDown(KeyCode.K))
 	    {
-	        newOb = Instantiate(ob); 
-            
+	        newOb = Instantiate(ob);
+            source.PlayOneShot(clip); // shoot sound
 	    }
 
 
@@ -69,7 +71,6 @@ public class Movement : MonoBehaviour
         }
 
         // todo cant turn it back to initial rotation
-
 
     }
 

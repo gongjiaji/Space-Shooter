@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: 9ddab293e2a8af3499dac05f5fd6169c
 ModelImporter:
-  serializedVersion: 22
+  serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
@@ -11,7 +11,18 @@ ModelImporter:
     4300002: enemy_ship
     4300004: vehicle_enemyShip
     9500000: //RootNode
-  externalObjects: {}
+    2186277476908879412: ImportLogs
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: vehicle_enemyShip_glow_mat
+    second: {fileID: 2100000, guid: 1e0350b97c61bfb4a91c62d756d01727, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: vehicle_enemyShip_metal_mat
+    second: {fileID: 2100000, guid: c547624e174de984882f0a14b4bb32e1, type: 2}
   materials:
     importMaterials: 1
     materialName: 1
@@ -62,6 +73,8 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 0
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0

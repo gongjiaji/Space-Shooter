@@ -8,15 +8,15 @@ Prefab:
     m_TransformParent: {fileID: 0}
     m_Modifications: []
     m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 0}
+  m_SourcePrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1691041980012666}
-  m_IsPrefabParent: 1
+  m_IsPrefabAsset: 1
 --- !u!1 &1511632923978880
 GameObject:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
+  serializedVersion: 6
   m_Component:
   - component: {fileID: 4078834827569582}
   - component: {fileID: 33559765202971004}
@@ -31,14 +31,14 @@ GameObject:
 --- !u!1 &1691041980012666
 GameObject:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
+  serializedVersion: 6
   m_Component:
   - component: {fileID: 4017060915239950}
   - component: {fileID: 54805886404145332}
-  - component: {fileID: 136487706487624234}
   - component: {fileID: 114388129645721998}
+  - component: {fileID: 65349311979272858}
   m_Layer: 0
   m_Name: bolt
   m_TagString: Untagged
@@ -49,11 +49,11 @@ GameObject:
 --- !u!4 &4017060915239950
 Transform:
   m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1691041980012666}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.008, z: 0.928}
+  m_LocalPosition: {x: 0, y: 0.427, z: 0.526}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4078834827569582}
@@ -63,7 +63,7 @@ Transform:
 --- !u!4 &4078834827569582
 Transform:
   m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1511632923978880}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
@@ -76,7 +76,7 @@ Transform:
 --- !u!23 &23084306779151860
 MeshRenderer:
   m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1511632923978880}
   m_Enabled: 1
@@ -111,29 +111,41 @@ MeshRenderer:
 --- !u!33 &33559765202971004
 MeshFilter:
   m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1511632923978880}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!54 &54805886404145332
 Rigidbody:
   m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1691041980012666}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 99
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 118
   m_CollisionDetection: 1
+--- !u!65 &65349311979272858
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1691041980012666}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.043608777, y: 1.0711749, z: 0.47833085}
+  m_Center: {x: 0.0022451505, y: 0.8057734, z: 0.030506253}
 --- !u!114 &114388129645721998
 MonoBehaviour:
   m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1691041980012666}
   m_Enabled: 1
@@ -142,18 +154,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 500
-  ob: {fileID: 4053419964354650, guid: 8788bbe4002e0b54a9592c0a7e002abd, type: 2}
   maxTime: 1
---- !u!136 &136487706487624234
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1691041980012666}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.031995893
-  m_Height: 0.59784216
-  m_Direction: 2
-  m_Center: {x: 0, y: 0.86, z: -0.010063022}
+  destoryPartical: {fileID: 100004, guid: 2857e183f4cd3df4e9096e5b578bd32f, type: 2}
